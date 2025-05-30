@@ -1,0 +1,11 @@
+# dist
+/dist
+/tsc-check
+/out
+
+# tools
+/coverage
+/coverage-ts
+
+# example
+/* stylelint-disable selector-pseudo-class-no-unknown */

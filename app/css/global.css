@@ -1,0 +1,85 @@
+:root {
+    --background-color: #faf9f7;
+
+    /* --background-color-rgb: rgb(250, 249, 247); */
+    --background-color-second: #f5f4f0;
+    --foreground-color: #171717;
+    --font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif;
+    --font-family-monospace: 'Lucida Console', 'Monaco', monospace;
+    --font-color: #212121;
+    --font-color-header: #002053;
+    --font-color-opposite: #f5f5f5;
+    --secondary-font-color: #8d8d8d;
+    --link-color: #1c61e2;
+    --link-color-visited: #821ce2;
+    --link-color-active: #1ea3cb;
+    --ui-unit: 4px;
+    --max-width: 1920px;
+    --border-color: #ddd;
+    --width-limit-side-padding: calc(var(--ui-unit) * 6);
+    --hover-backgorund-color: #eee;
+    --display-mobile: none;
+    --display-desktop: block;
+
+    /* header */
+    --header-position: sticky;
+
+    /*
+    --desktop-width: 1024px;
+    --tablet-width: 768px;
+    --phone-width: 480px;
+    --width-limit-desktop-side-padding: calc(var(--ui-unit) * 6);
+    --width-limit-tablet-side-padding: calc(var(--ui-unit) * 4);
+    --width-limit-phone-side-padding: calc(var(--ui-unit) * 3);
+    */
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #0a0a0a;
+        --foreground-color: #ededed;
+    }
+}
+*/
+
+html,
+body {
+    margin: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--font-family), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.25;
+    text-wrap: pretty;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (width <= 768px) {
+    :root {
+        --width-limit-side-padding: calc(var(--ui-unit) * 6);
+    }
+}
+
+@media screen and (width <= 768px), (hover: none) {
+    :root {
+        --display-mobile: block;
+        --display-desktop: none;
+        --header-position: relative;
+    }
+}

@@ -1,0 +1,51 @@
+# IDE
+/.idea/
+/.vscode/
+
+# data base
+/db/back-up/
+/db/data-base.article.db-backup/
+/db/data-base.user.db-backup/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# npm
+/node_modules/
+
+# dists
+/dist/
+/dist-server/
+
+# report
+/coverage-ts/
+/tsc-check/
+/coverage/
+
+# style's d.ts
+*.scss.d.ts
+*.css.d.ts
+
+# other
+.DS_Store
+
+/.env
+/.env.production
+/.env.development
+/.env.local
+
+# cache
+/article-cache/
+
+# static site
+/static-site/
+
+# temp
+/static-file-temp/
+
+# nextjs
+/.next
+/out
+/next-env.d.ts
