@@ -4,7 +4,7 @@ import {env} from "node:process";
 import type {NextRequest, NextResponse} from "next/server";
 import Stripe from "stripe";
 
-const stripe = new Stripe(env.STRIPE_API_KEY ?? "");
+const stripe = new Stripe(env.STRIPE_SECRET_API_KEY ?? "");
 
 export async function POST(request: NextRequest, response: NextResponse): Promise<Response> {
     const price: Stripe.Response<Stripe.Price> = await stripe.prices.create({
