@@ -160,7 +160,8 @@ export default [
             "@typescript-eslint/use-unknown-in-catch-callback-variable": 0,
             "@typescript-eslint/require-array-sort-compare": [2, {ignoreStringArrays: false}],
             "@typescript-eslint/prefer-readonly-parameter-types": [
-               2,
+               0
+/*
                {
                    "allow": [
                        {
@@ -170,6 +171,7 @@ export default [
                        }
                    ]
                }
+*/
             ],
 
             // Unicorn

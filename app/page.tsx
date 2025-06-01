@@ -8,9 +8,12 @@ export const metadata: Metadata = {
 };
 
 export default function Home(): JSX.Element {
+    // const data = await (await fetch("http://localhost:3001/api/payment")).text();
+
     return (
         <>
             <h1>home page</h1>
+            {/*<p>{data}</p>*/}
             <Stripe />
         </>
     );

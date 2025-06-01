@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
     //         },
     //     ],
     // },
-    output: "export", // Check "out" folder
+    // output: "export", // Check "out" folder
 };
 
 export default nextConfig;
