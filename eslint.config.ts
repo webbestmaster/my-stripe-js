@@ -320,9 +320,6 @@ export default [
             "next-env.d.ts",
             "next.config.mjs",
             "app/image/**",
-
-            // ESLint
-            "eslint.config.mjs",
         ],
     },
 ];
