@@ -1,4 +1,4 @@
-/* eslint-disable sort-keys, @typescript-eslint/no-unsafe-member-access, sonarjs/todo-tag */
+/* eslint-disable sort-keys, sonarjs/todo-tag */
 import eslintJs from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import jest from "eslint-plugin-jest";
@@ -160,8 +160,8 @@ export default [
             "@typescript-eslint/use-unknown-in-catch-callback-variable": 0,
             "@typescript-eslint/require-array-sort-compare": [2, {ignoreStringArrays: false}],
             "@typescript-eslint/prefer-readonly-parameter-types": [
-               0
-/*
+                0,
+                /*
                {
                    "allow": [
                        {
@@ -296,8 +296,8 @@ export default [
             "coverage/*",
 
             // Style's d.ts
-            // eslint-disable-next-line arrow-body-style, @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-unsafe-argument, sonarjs/slow-regex
-            pathToFile => /\S+\.s?css\.d\.ts$/u.test(pathToFile),
+            // eslint-disable-next-line arrow-body-style, sonarjs/slow-regex
+            (pathToFile: string): boolean => /\S+\.s?css\.d\.ts$/u.test(pathToFile),
 
             // Test
             "test-backstop/*",
