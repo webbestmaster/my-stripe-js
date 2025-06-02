@@ -30,6 +30,6 @@ jobs:
             -   run: npm run build
                 env:
                   STRIPE_SECRET_API_KEY=${{ secrets.STRIPE_SECRET_API_KEY }}
-                  NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=${{ secrets.NEXT_PUBLIC_STRIPE_PUBLIC_KEY }}
+                  NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
             -   run: npm run check
             -   run: npm run test:unit
