@@ -1,12 +1,10 @@
 "use client";
 
-import {env} from "node:process";
-
 import {CheckoutProvider, PaymentElement, useCheckout} from "@stripe/react-stripe-js";
 import {loadStripe} from "@stripe/stripe-js";
 import {type FormEventHandler, type JSX, useCallback} from "react";
 
-const stripePromise = loadStripe(env.STRIPE_PUBLISHABLE_KEY ?? "");
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? "");
 
 async function fetchClientSecret(): Promise<string> {
     const response: Response = await fetch("http://localhost:3001/api/create-checkout-session", {method: "POST"});
