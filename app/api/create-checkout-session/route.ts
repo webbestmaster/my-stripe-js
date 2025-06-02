@@ -16,7 +16,7 @@ export async function POST(request: NextRequest, response: NextResponse): Promis
     });
 
     const session: Stripe.Response<Stripe.Checkout.Session> = await stripe.checkout.sessions.create({
-        customer_email: "mycustomeremail@gmai.com",
+        customer_email: "mycustomeremail@gmai.com", // actually required
         line_items: [
             {
                 price: price.id,
@@ -24,6 +24,7 @@ export async function POST(request: NextRequest, response: NextResponse): Promis
             },
         ],
         mode: "payment",
+        payment_method_types: ["card"],
         return_url: `http://localhost:3001/return?session_id={CHECKOUT_SESSION_ID}`,
         ui_mode: "custom",
     });
