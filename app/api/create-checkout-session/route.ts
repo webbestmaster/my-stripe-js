@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, camelcase */
 import {env} from "node:process";
 
-import type {NextRequest, NextResponse} from "next/server";
+import type {NextRequest} from "next/server";
 import Stripe from "stripe";
 
 const stripe = new Stripe(env.STRIPE_SECRET_API_KEY ?? "");
 
-export async function POST(request: NextRequest, response: NextResponse): Promise<Response> {
+export async function POST(request: NextRequest): Promise<Response> {
     const price: Stripe.Response<Stripe.Price> = await stripe.prices.create({
         currency: "sek",
         product_data: {
